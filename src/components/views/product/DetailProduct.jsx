@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { verDetalles } from '../../../redux/actions/action';
 import { Image, Icon, Text, Stack, useDisclosure } from '@chakra-ui/react'

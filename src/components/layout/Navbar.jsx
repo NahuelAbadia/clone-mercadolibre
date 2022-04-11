@@ -39,7 +39,7 @@ const Navbar = () => {
       backgroundColor="#FFF159"
       borderBottom={"1px"}
       borderColor="gray.300"
-      h="11vh"
+      h="105px"
     >
       <Container
         maxWidth="container.xl"

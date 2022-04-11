@@ -195,7 +195,7 @@ const DetailProduct = ({ productInfo, setProductInfo }) => {
                     <li><Text lineHeight="5">{desc.name} {desc.values[0].name}</Text></li>
                   </ul>
                 })}
-                <Link to="/" style={{ color: "#3483FA" }}>Ver características</Link>
+                <Text color="#3483FA">Ver características</Text>
               </Stack>
             </Stack>
           </Stack>

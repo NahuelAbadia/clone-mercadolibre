@@ -4,7 +4,7 @@ import Home from "./views/Home";
 import Product from "./views/Product";
 import Cart from "./views/Cart";
 import ListProduct from "./views/ListProduct"
-import BuyProduct from "./components/BuyProduct"
+import BuyProduct from "./views/BuyProduct"
 //Routes
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HOME, PRODUCT_DETAIL, CART, BUYING, SEARCH } from './routes/paths';

@@ -34,7 +34,8 @@ export default function rootReducer(state = initialState, action) {
     case SEARCH_PRODUCT:
       return {
         ...state,
-        searchProduct: action.payload
+        searchProduct: action.payload,
+        loading: false,
       }
     default:
       return state

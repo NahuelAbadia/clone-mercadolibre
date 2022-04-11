@@ -36,6 +36,7 @@ export function loading() {
 
 export function searchProduct(title) {
   return async function (dispatch) {
+    dispatch(loading())
     try {
       const URL = `https://api.mercadolibre.com/sites/MLA/search?q=${title}`
       const result = await axios.get(URL)

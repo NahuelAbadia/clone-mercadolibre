@@ -1,17 +1,41 @@
-import {DETALLES} from "../actions/action"
+import { DETALLES, AGREGAR_PRODUCTOS, ELIMINAR_PRODUCTOS, LOADING, SEARCH_PRODUCT } from "../actions/action"
 
 const initialState = {
-  productos: [],
+  productDetail: {},
+  carrito: [],
+  loading: false,
+  searchProduct: []
 }
 
-export default function rootReducer (state = initialState, action) {
+export default function rootReducer(state = initialState, action) {
   switch (action.type) {
     case DETALLES:
-      return{
+      return {
         ...state,
-        productos: action.payload
+        productDetail: action.payload
+      }
+    case AGREGAR_PRODUCTOS:
+      return {
+        ...state,
+        carrito: state.carrito.concat(action.payload)
+      }
+    case ELIMINAR_PRODUCTOS:
+      return {
+        ...state,
+        carrito: state.carrito.filter(item => item.id !== action.payload),
+        loading: false
+      }
+    case LOADING:
+      return {
+        ...state,
+        loading: true
       }
 
+    case SEARCH_PRODUCT:
+      return {
+        ...state,
+        searchProduct: action.payload
+      }
     default:
       return state
   }

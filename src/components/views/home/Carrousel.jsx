@@ -1,14 +1,14 @@
 import React from 'react'
-import carrusel1 from '../assets/carrusel1.png'
-import carrusel2 from '../assets/carrusel2.png'
-import carrusel3 from '../assets/carrusel3.png'
-import carrusel4 from '../assets/carrusel4.png'
-import carrusel5 from '../assets/carrusel5.png'
-import carrusel6 from '../assets/carrusel6.png'
+import carrusel1 from '../../../assets/carrusel1.png'
+import carrusel2 from '../../../assets/carrusel2.png'
+import carrusel3 from '../../../assets/carrusel3.png'
+import carrusel4 from '../../../assets/carrusel4.png'
+import carrusel5 from '../../../assets/carrusel5.png'
+import carrusel6 from '../../../assets/carrusel6.png'
 
 const Carrousel = () => {
   return (
-    <div id="carouselExampleControls" className="carousel slide" style={{width:"84%"}} data-bs-ride="carousel">
+    <div id="carouselExampleControls" className="carousel slide" style={{ width: "84%" }} data-bs-ride="carousel">
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img src={carrusel1} className="d-block " alt="..." />

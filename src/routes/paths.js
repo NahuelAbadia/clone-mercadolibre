@@ -1,3 +1,5 @@
 export const HOME = '/'
-export const PRODUCT = '/product'
 export const PRODUCT_DETAIL = '/product/:id'
+export const CART = '/cart'
+export const BUYING = '/buying'
+export const SEARCH = '/search/:title'

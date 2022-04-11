@@ -1,21 +1,33 @@
 import React from 'react';
-import Navbar from "./components/Navbar";
-import Home from "./components/view/Home";
-import Product from "./components/view/Product";
+//Views
+import Home from "./views/Home";
+import Product from "./views/Product";
+import Cart from "./views/Cart";
+import ListProduct from "./views/ListProduct"
+import BuyProduct from "./components/BuyProduct"
+//Routes
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HOME, PRODUCT, PRODUCT_DETAIL } from './routes/paths';
+import { HOME, PRODUCT_DETAIL, CART, BUYING, SEARCH } from './routes/paths';
+import WithNav from './routes/WithNav';
+import WithOutNav from './routes/WithOutNav';
+//Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./index.css"
 
 function App() {
   return (
     <>
-      <Navbar />
       <Router>
         <Routes>
-          <Route exact path={HOME} element={<Home />} />
-          <Route path={PRODUCT} element={<Product />} />
-          <Route path={PRODUCT_DETAIL} element={<Product />} />
+          <Route element={<WithNav />}>
+            <Route exact path={HOME} element={<Home />} />
+            <Route path={PRODUCT_DETAIL} element={<Product />} />
+            <Route path={CART} element={<Cart />} />
+            <Route path={SEARCH} element={<ListProduct />} />
+          </Route>
+          <Route element={<WithOutNav />}>
+            <Route path={BUYING} element={<BuyProduct />} />
+          </Route>
         </Routes>
       </Router>
     </>

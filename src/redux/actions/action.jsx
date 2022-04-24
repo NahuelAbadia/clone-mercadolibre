@@ -39,12 +39,12 @@ export function searchProduct(title) {
     dispatch(loading())
     try {
       const URL = `https://api.mercadolibre.com/sites/MLA/search?q=${title}`
-      const result = await axios.get(URL)
-      console.log(result.data)
+      const { data: result } = await axios.get(URL)
+      console.log(result)
 
       return dispatch({
         type: SEARCH_PRODUCT,
-        payload: result.data
+        payload: result
       })
 
     } catch (error) {

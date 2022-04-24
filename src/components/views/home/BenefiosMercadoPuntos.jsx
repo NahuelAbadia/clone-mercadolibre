@@ -22,7 +22,7 @@ const BenefiosMercadoPuntos = () => {
         color="GrayText"
         fontWeight={"light"}
       >
-        Benefios de Mercado Puntos
+        Beneficios de Mercado Puntos
       </Text>
       <Stack direction="row" w="1185px" spacing={4}>
         {images.map((img, index) => (
